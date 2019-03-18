@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <PurchaseDate></PurchaseDate>
+    <Disclaimer></Disclaimer>
   </div>
 </template>
 
 <script>
 import PurchaseDate from './components/PurchaseDate.vue';
+import Disclaimer from './components/Disclaimer.vue';
 
 export default {
   name: 'app',
   components: {
     PurchaseDate,
+    Disclaimer,
   },
 };
 </script>
