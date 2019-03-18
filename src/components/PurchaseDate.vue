@@ -1,9 +1,13 @@
 <template>
   <div>
-    <h1>Train ticket reminder</h1>
+    <div class="image">
+      <img :src="image" :alt="altText" />
+    </div>
+    <h1>The Onion Train</h1>
+    <h3>Remember when to buy your ticket!</h3>
     <label for="date">Departure date: </label>
     <input name="date" type="date" v-model="desiredDate" />
-    <p>Ticket purchase date: {{ purchaseDate }}</p>
+    <p>Ticket purchase date: {{ purchaseDate }} at 0h:30min</p>
   </div>
 </template>
 
@@ -11,9 +15,12 @@
 import moment from 'moment';
 
 export default {
+  name: 'PurchaseDate',
   data() {
     return {
       desiredDate: null,
+      image: require('../assets/onion-train.png'),
+      altText: 'logo',
     };
   },
   computed: {
@@ -26,4 +33,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.image img {
+  width: 10%;
+  height: auto;
+}
+</style>
