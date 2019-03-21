@@ -1,18 +1,21 @@
 <template>
   <div id="app">
-    <PurchaseDate></PurchaseDate>
-    <Disclaimer></Disclaimer>
+    <date-form></date-form>
+    <add-to-calendar></add-to-calendar>
+    <disclaimer></disclaimer>
   </div>
 </template>
 
 <script>
-import PurchaseDate from './components/PurchaseDate.vue';
+import DateForm from './components/DateForm.vue';
 import Disclaimer from './components/Disclaimer.vue';
+import AddToCalendar from './components/AddToCalendar.vue';
 
 export default {
   name: 'app',
   components: {
-    PurchaseDate,
+    DateForm,
+    AddToCalendar,
     Disclaimer,
   },
 };

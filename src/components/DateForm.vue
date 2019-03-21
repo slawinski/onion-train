@@ -15,7 +15,7 @@
 import moment from 'moment';
 
 export default {
-  name: 'PurchaseDate',
+  name: 'DateForm',
   data() {
     return {
       desiredDate: null,
@@ -35,6 +35,7 @@ export default {
 
 <style>
 .image img {
+  min-width: 150px;
   width: 10%;
   height: auto;
 }
