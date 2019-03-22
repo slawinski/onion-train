@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <date-form></date-form>
-    <add-to-calendar></add-to-calendar>
+    <date-form @onDateSelect="passDate"></date-form>
+    <event-creator :dte="childData"></event-creator>
     <disclaimer></disclaimer>
   </div>
 </template>
@@ -9,14 +9,24 @@
 <script>
 import DateForm from './components/DateForm.vue';
 import Disclaimer from './components/Disclaimer.vue';
-import AddToCalendar from './components/AddToCalendar.vue';
+import EventCreator from './components/EventCreator.vue';
 
 export default {
   name: 'app',
   components: {
     DateForm,
-    AddToCalendar,
+    EventCreator,
     Disclaimer,
+  },
+  data: function() {
+    return {
+      childData: '',
+    };
+  },
+  methods: {
+    passDate(variable) {
+      this.childData = variable;
+    },
   },
 };
 </script>

@@ -7,7 +7,7 @@
     <h3>Remember when to buy your ticket!</h3>
     <label for="date">Departure date: </label>
     <input name="date" type="date" v-model="desiredDate" />
-    <p>Ticket purchase date: {{ purchaseDate }} at 0h:30min</p>
+    <p>Ticket purchase date: {{ purchaseDate }}</p>
   </div>
 </template>
 
@@ -25,9 +25,11 @@ export default {
   },
   computed: {
     purchaseDate: function() {
-      return moment(this.desiredDate)
+      let date = moment(this.desiredDate)
         .subtract(30, 'days')
-        .format('DD-MMM-YYYY');
+        .add(30, 'minutes');
+      this.$emit('onDateSelect', date);
+      return date;
     },
   },
 };
