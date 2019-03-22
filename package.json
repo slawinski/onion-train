@@ -9,8 +9,7 @@
   },
   "dependencies": {
     "moment": "^2.24.0",
-    "vue": "^2.6.6",
-    "vue-add-to-calendar": "^1.0.4"
+    "vue": "^2.6.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
