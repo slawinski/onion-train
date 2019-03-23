@@ -6,7 +6,7 @@
     :end="calcDate"
     details="Be ready to buy your tickets exactly on this date!"
     inline-template
-    v-if="dte"
+    :style="{ visibility: dte._isValid ? 'visible' : 'hidden' }"
   >
     <div>
       <google-calendar id="google-calendar">
