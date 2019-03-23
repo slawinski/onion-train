@@ -6,9 +6,12 @@
     :end="calcDate"
     details="Be ready to buy your tickets exactly on this date!"
     inline-template
+    v-if="dte"
   >
     <div>
-      <google-calendar id="google-calendar"> Add to Google calendar </google-calendar>
+      <google-calendar id="google-calendar">
+        Add to Google calendar
+      </google-calendar>
     </div>
   </add-to-calendar>
 </template>
