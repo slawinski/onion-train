@@ -4,7 +4,7 @@
       <img :src="image" :alt="altText" />
     </div>
     <h1>The Onion Train</h1>
-    <h3>Remember when to buy your tickets on the cheap!</h3>
+    <h3>Remember when to buy tickets on the cheap!</h3>
     <label for="date">Select desired departure date: </label>
     <input name="date" type="date" v-model="desiredDate" />
     <p>Ticket purchase date: {{ purchaseDate }}</p>
