@@ -4,8 +4,8 @@
       <img :src="image" :alt="altText" />
     </div>
     <h1>The Onion Train</h1>
-    <h3>Remember when to buy your ticket!</h3>
-    <label for="date">Departure date: </label>
+    <h3>Remember when to buy your tickets on the cheap!</h3>
+    <label for="date">Select desired departure date: </label>
     <input name="date" type="date" v-model="desiredDate" />
     <p>Ticket purchase date: {{ purchaseDate }}</p>
   </div>
@@ -38,6 +38,7 @@ export default {
 <style>
 .image img {
   min-width: 150px;
+  margin-top: 20px;
   width: 10%;
   height: auto;
 }
