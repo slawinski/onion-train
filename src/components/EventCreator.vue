@@ -6,7 +6,7 @@
     :end="calcDate"
     details="Be ready to buy your tickets exactly on this date!"
     inline-template
-    :style="{ visibility: dte._isValid ? 'visible' : 'hidden' }"
+    :style="{ visibility: dte.$D ? 'visible' : 'hidden' }"
   >
     <div>
       <google-calendar id="google-calendar">
@@ -31,7 +31,7 @@ export default {
   },
   watch: {
     dte: function() {
-      this.calcDate = this.dte._d;
+      this.calcDate = this.dte.$d;
     },
   },
 };

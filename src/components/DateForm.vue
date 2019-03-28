@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import moment from 'moment';
+import dayjs from 'dayjs';
 
 export default {
   name: 'DateForm',
@@ -25,11 +25,12 @@ export default {
   },
   computed: {
     purchaseDate: function() {
-      let date = moment(this.desiredDate)
+      let date = dayjs(this.desiredDate)
         .subtract(30, 'days')
         .add(30, 'minutes');
       this.$emit('onDateSelect', date);
-      return date;
+      let validDate = date.isValid() ? date : 'Departure date not selected';
+      return validDate;
     },
   },
 };
