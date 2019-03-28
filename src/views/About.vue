@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="about-text">
     <p><strong>The Onion Train</strong> was built of need.</p>
     <p>
       Tickets for the Intercity Premium trains are fucking expensive. The only way to enjoy your
@@ -22,4 +22,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.about-text {
+  width: 500px;
+  margin: 0 auto;
+}
+</style>
