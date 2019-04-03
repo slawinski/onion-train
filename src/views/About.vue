@@ -24,7 +24,7 @@ export default {
 
 <style>
 .about-text {
-  width: 500px;
+  width: 600px;
   margin: 0 auto;
 }
 </style>
